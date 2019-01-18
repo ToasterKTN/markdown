@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gomarkdown/markdown/ast"
+	"github.com/ToasterKTN/markdown/ast"
 )
 
 // Flags control optional behavior of HTML renderer.

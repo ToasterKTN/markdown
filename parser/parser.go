@@ -9,7 +9,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/gomarkdown/markdown/ast"
+	"github.com/ToasterKTN/markdown/ast"
 )
 
 // Extensions is a bitmask of enabled parser extensions.

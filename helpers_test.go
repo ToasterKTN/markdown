@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/gomarkdown/markdown/html"
-	"github.com/gomarkdown/markdown/parser"
+	"github.com/ToasterKTN/markdown/html"
+	"github.com/ToasterKTN/markdown/parser"
 )
 
 type TestParams struct {

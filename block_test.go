@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gomarkdown/markdown/html"
-	"github.com/gomarkdown/markdown/parser"
+	"github.com/ToasterKTN/markdown/html"
+	"github.com/ToasterKTN/markdown/parser"
 )
 
 func TestPrefixHeaderNoExtensions(t *testing.T) {
