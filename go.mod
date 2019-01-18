@@ -1,1 +1,1 @@
-module github.com/gomarkdown/markdown
+module github.com/ToasterKTN/markdown
