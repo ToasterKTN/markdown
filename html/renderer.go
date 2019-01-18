@@ -1137,7 +1137,7 @@ func (r *Renderer) writeTOC(w io.Writer, doc ast.Node) {
 	}
 
 	if buf.Len() > 0 {
-		io.WriteString(w, "<nav class=\"toc\">\n")
+		io.WriteString(w, "<nav class=\"toc\" id=\"toc\">\n")
 		w.Write(buf.Bytes())
 		io.WriteString(w, "\n\n</nav>\n")
 	}
