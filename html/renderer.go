@@ -40,6 +40,7 @@ const (
 	SmartypantsAngledQuotes                   // Enable angled double quotes (with Smartypants) for double quotes rendering
 	SmartypantsQuotesNBSP                     // Enable « French guillemets » (with Smartypants)
 	TOC                                       // Generate a table of contents
+	HideTOC                                   // Hide the TOC (collapse)
 
 	CommonFlags Flags = Smartypants | SmartypantsFractions | SmartypantsDashes | SmartypantsLatexDashes
 )
@@ -1137,7 +1138,11 @@ func (r *Renderer) writeTOC(w io.Writer, doc ast.Node) {
 	}
 
 	if buf.Len() > 0 {
-		io.WriteString(w, "<nav class=\"toc\" id=\"toc\">\n")
+		if r.opts.Flags&HideTOC != 0 {
+			io.WriteString(w, "<nav class=\"toc hide\" id=\"toc\">\n")
+		} else {
+			io.WriteString(w, "<nav class=\"toc\" id=\"toc\">\n")
+		}
 		w.Write(buf.Bytes())
 		io.WriteString(w, "\n\n</nav>\n")
 	}
